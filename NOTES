@@ -1,0 +1,22 @@
+1. create a new controller called Static Controller 
+2. Create a home view with an h2 that says Welcome to Flatiron Widgets
+3. Create a defult application layout at the correct location, add an h1 that says Flatiron Widgets Store = this is for the main sties welcome bar
+
+
+Custom
+1. Create a new controller StoreAdminController
+2. want this controller to use a new layout called admin. This layout should have an h1 that says Flatiron Widgets: admin
+3. Create a home view layout for StoreAdminController with an h2 that says Welcome Flatiron admin
+4. Get your newly created action to use the admin template
+
+Custom layouts for an action
+    Create a new view for StoreAdminController called orders with an h2 that says "Welcome to Flatiron Open Orders". Also add an ol with a few li elements containing fake orders.
+
+Now you should create a new layout called order_administration and add an h1 that says "Flatiron Widgets: Open Orders".
+
+At this point, the store_admin#orders action will use the admin layout you defined earlier, but we need it to use the new order_administration layout. The trick is we want only the store_admin#orders action to use the order_administration layout, and we want to keep the admin layout as the default for the other actions in StoreAdminController.
+
+
+Create a new action in StoreAdminController called invoice, and insert an h1 that says "Your Invoice".
+
+This action is assigned the default layout for the controller, admin, but we don't want it to use any layout at all (while also not affecting the layouts assigned to other actions in the controller).
